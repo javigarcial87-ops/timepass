@@ -1,8 +1,5 @@
-module.exports= (req,resp,next)=>{
-    const fechaActual = new Date ()
-    const horaActual = fechaActual.gethours()
-
-    req.horaActual = horaActual
-
-    next()
-}
+module.exports = (req, res, next) => {
+  const fecha = new Date();
+  req.horaActual = fecha.getHours();
+  next();
+};
